@@ -12,4 +12,8 @@ export class UtilisateursComponent implements OnInit {
 
   ngOnInit() { }
 
+  showSubmit(o){
+    console.log(o);
+  }
+
 }

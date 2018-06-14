@@ -3,40 +3,22 @@
 </p>
 
 <section>
-  <article *ngFor="let l of lUtilisateurs.utilisateurs; let i = index">
 
-    <div>
-      <div>
-        <img [src]="s.cover" />
-      </div>
-      <div>
-        <p>Auteur : {{ s.author }}</p>
-        <p>Date de publication : {{ s.publishedDate }}</p>
-        <p>ISBN13 : {{ s.ISBN13 }}</p>
-      </div>
-      <div>
-        <a href [routerLink]="['/series', i]">Editer cette série</a>
-      </div>
+  <article *ngFor="let u of lUtilisateurs.listeUtilisateurs, let i=index">
+    <div class="edite" (click)="u.edit = !u.edit">E</div>
+    <h3>{{ u.civilite }} {{ u.nom | titlecase }} {{ u.prenom | uppercase }}</h3>
+    <div *ngIf="!u.edit">
+      <p>Courriel : {{ u.courriel }}</p>
     </div>
-  </article>
-</section>
-
-<section>
-
-  <article>
-    <table>
-      <tr>
-        <th>Prénom</th>
-        <th>Nom</th>
-        <th>Mail</th>
-      </tr>
-      <tr *ngFor="let u of lUtilisateurs.listeUtilisateurs, let i=index">
-        <td>{{u.prenom}}</td>
-        <td>{{u.nom}}</td>
-        <td>{{u.courriel}}</td>
-      </tr>
-
-    </table>
+    <form *ngIf="u.edit" (ngSubmit)="showSubmit(lUtilisateurs.listeUtilisateurs[i])">
+      <fieldset>
+        <input name="civilite" [(ngModel)]="u.civilite" placeholder="Civilité">
+        <input name="nom" [(ngModel)]="u.nom" placeholder="Nom">
+        <input name="prenom" [(ngModel)]="u.prenom" placeholder="Prénom">
+        <input name="courriel" [(ngModel)]="u.courriel" placeholder="Courriel">
+        <button type="submit">MAJ</button>
+      </fieldset>
+    </form>
   </article>
 
 </section>
