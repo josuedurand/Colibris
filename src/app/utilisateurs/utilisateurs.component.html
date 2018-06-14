@@ -1,10 +1,12 @@
-<p>
-  utilisateurs works!
-</p>
+<div>
+  <button (click)="viewUsers(1)">Professeurs</button>
+  <button (click)="viewUsers(2)">Documentalistes</button>
+  <button (click)="viewUsers(3)">Administrateurs</button>
+</div>
 
-<section>
+<section *ngFor="let u of lUtilisateurs.listeUtilisateurs, let i=index">
 
-  <article *ngFor="let u of lUtilisateurs.listeUtilisateurs, let i=index">
+  <article *ngIf="u.view">
     <div class="edite" (click)="u.edit = !u.edit">E</div>
     <h3>{{ u.civilite }} {{ u.nom | titlecase }} {{ u.prenom | uppercase }}</h3>
     <div *ngIf="!u.edit">

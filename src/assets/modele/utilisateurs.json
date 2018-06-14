@@ -7,6 +7,7 @@
         "prenom": "Prénom",
         "courriel" : "C.test.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
@@ -24,11 +25,12 @@
         "prenom": "Caroline",
         "courriel" : "51412cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
                 "college" : 1,
-                "droit" : 1,
+                "droit" : 2,
                 "hierarchie": 1
             }
         ]
@@ -41,6 +43,7 @@
         "prenom": "Elisabeth",
         "courriel" : "L.GFebus.Orthez.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
@@ -58,11 +61,12 @@
         "prenom": "Marie France",
         "courriel" : "L.GFebus.Orthez.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
                 "college" : 3,
-                "droit" : 1,
+                "droit" : 2,
                 "hierarchie": 2
             }
         ]
@@ -75,11 +79,12 @@
         "prenom": "Laetitia",
         "courriel" : "C.JMoulin.Artix.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
                 "college" : 4,
-                "droit" : 1,
+                "droit" : 3,
                 "hierarchie": 1
             }
         ]
@@ -92,6 +97,7 @@
         "prenom": "Emmanuelle",
         "courriel" : "C.MDeNavarre.Pau.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
@@ -109,6 +115,7 @@
         "prenom": "Gaëlle",
         "courriel" : "C.MDeNavarre.Pau.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
@@ -126,6 +133,7 @@
         "prenom": "Catherine",
         "courriel" : "C.JSarailh.Monein.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
@@ -143,11 +151,12 @@
         "prenom": "Emmanuelle",
         "courriel" : "NC",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
                 "college" : 7,
-                "droit" : 1,
+                "droit" : 2,
                 "hierarchie": 1
             }
         ]
@@ -160,11 +169,12 @@
         "prenom": "Lucile",
         "courriel" : "NC",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
                 "college" : 8,
-                "droit" : 1,
+                "droit" : 2,
                 "hierarchie": 1
             }
         ]
@@ -177,6 +187,7 @@
         "prenom": "Hélène",
         "courriel" : "C.SerresCastet.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
@@ -194,6 +205,7 @@
         "prenom": "Corinne",
         "courriel" : "C.SerresCastet.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
@@ -211,11 +223,12 @@
         "prenom": "Claire",
         "courriel" : "C.JMoulin.Artix.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
                 "college" : 9,
-                "droit" : 1,
+                "droit" : 3,
                 "hierarchie": 3
             }
         ]
@@ -228,6 +241,7 @@
         "prenom": "Anne",
         "courriel" : "C.MRavel.StJeanDeLuz.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
@@ -245,11 +259,12 @@
         "prenom": "Sylvaine",
         "courriel" : "C.MRavel.StJeanDeLuz.Cdi@ac-bordeaux.fr",
         "motDePasse" : "*****",
+        "view" : true,
         "profil": [
             {
                 "@type": "Profil",
                 "college" : 10,
-                "droit" : 1,
+                "droit" : 2,
                 "hierarchie": 2
             }
         ]

@@ -7,13 +7,29 @@ import { UtilisateursService } from '../services/utilisateurs.service';
   styleUrls: ['./utilisateurs.component.css']
 })
 export class UtilisateursComponent implements OnInit {
-  
-  constructor(public lUtilisateurs: UtilisateursService) { }
+
+  droit : number;
+
+  constructor(public lUtilisateurs: UtilisateursService) { 
+    console.log(this.droit);
+  }
 
   ngOnInit() { }
 
   showSubmit(o){
     console.log(o);
   }
+
+  viewUsers(index){
+    this.droit = index;
+    for (let i = 0; i < this.lUtilisateurs.listeUtilisateurs.length; i++) {
+      const element = this.lUtilisateurs.listeUtilisateurs[i];
+      if(element.profil[0].droit === this.droit){
+        element.view = true;
+      } else {
+        element.view = false;
+      };
+    };
+  };
 
 }
