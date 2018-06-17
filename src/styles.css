@@ -12,16 +12,59 @@ body {
     color: #333333;
 }
 
-section {
-    width: 900px;
+.wrap{
+    width: 70%;
     margin: auto;
 }
 
-article {
+.contenant {
     background-color: #f2f2f2;
     padding: 10px;
     border-radius: 5px;
     border: solid 1px #e2e2e2;
     margin-bottom: 20px;
     display: flex;
+}
+
+/*** FLEX ***/
+.flexSB{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexSA{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexFS{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexColumn{
+ display: flex;
+ flex-direction: column;
+}
+
+.flexColumnCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flxColCntrCntr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

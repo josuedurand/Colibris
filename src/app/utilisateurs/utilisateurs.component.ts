@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { UtilisateursService } from '../services/utilisateurs.service';
+import { CollegesService } from '../services/colleges.service';
 
 @Component({
   selector: 'app-utilisateurs',
@@ -10,7 +11,8 @@ export class UtilisateursComponent implements OnInit {
 
   droit : number;
 
-  constructor(public lUtilisateurs: UtilisateursService) { 
+  constructor(public lUtilisateurs: UtilisateursService
+              public lColleges : CollegesService) { 
     console.log(this.droit);
   }
 

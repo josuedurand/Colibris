@@ -1,26 +1,66 @@
-<div>
-  <button (click)="viewUsers(1)">Professeurs</button>
-  <button (click)="viewUsers(2)">Documentalistes</button>
-  <button (click)="viewUsers(3)">Administrateurs</button>
-</div>
+<section class="wrap">
+  <div>
+    <button (click)="viewUsers(1)">Professeurs</button>
+    <button (click)="viewUsers(2)">Documentalistes</button>
+    <button (click)="viewUsers(3)">Administrateurs</button>
+    <button><i class="material-icons">add</i></button>
+  </div>
+</section>
 
-<section *ngFor="let u of lUtilisateurs.listeUtilisateurs, let i=index">
+<section class="wrap">
 
-  <article *ngIf="u.view">
-    <div class="edite" (click)="u.edit = !u.edit">E</div>
-    <h3>{{ u.civilite }} {{ u.nom | titlecase }} {{ u.prenom | uppercase }}</h3>
-    <div *ngIf="!u.edit">
-      <p>Courriel : {{ u.courriel }}</p>
-    </div>
-    <form *ngIf="u.edit" (ngSubmit)="showSubmit(lUtilisateurs.listeUtilisateurs[i])">
-      <fieldset>
-        <input name="civilite" [(ngModel)]="u.civilite" placeholder="Civilité">
-        <input name="nom" [(ngModel)]="u.nom" placeholder="Nom">
-        <input name="prenom" [(ngModel)]="u.prenom" placeholder="Prénom">
-        <input name="courriel" [(ngModel)]="u.courriel" placeholder="Courriel">
-        <button type="submit">MAJ</button>
-      </fieldset>
-    </form>
-  </article>
+  <div class="flexColumn" *ngFor="let u of lUtilisateurs.listeUtilisateurs, let i=index">
+
+    <article class="contenant flexSB" *ngIf="u.view && !u.edit">
+
+      <div class="w40">
+        <div class="flexFS">
+          <h3>{{ u.nom | titlecase }}</h3>
+          <p>{{ u.prenom | titlecase }}</p>
+        </div>
+        <p>{{ u.courriel }}</p>
+      </div>
+
+      <div>
+        <p>{{ u.college }}</p>
+      </div>
+
+      <div>
+        <button class="edite" (click)="u.edit = !u.edit"><i class="material-icons">edit</i></button>
+        <button><i class="material-icons">delete</i></button>
+      </div>
+
+    </article>
+
+    <!-- ---------------------------------------- -->
+
+    <article class="contenant flexSB" *ngIf="u.edit">
+
+      <form class="w90 flexSB" (ngSubmit)="showSubmit(lUtilisateurs.listeUtilisateurs[i], u.edit = !u.edit)">
+        <fieldset class="w40">
+          <fieldset class=flexFS>
+            <input name="nom" [(ngModel)]="u.nom" placeholder="Nom">
+            <input name="prenom" [(ngModel)]="u.prenom" placeholder="Prénom">
+          </fieldset>
+          <input class="max" name="courriel" [(ngModel)]="u.courriel" placeholder="Courriel">
+        </fieldset>
+
+        <fieldset class="w40">
+          <select name="college" id="college" [(ngModel)]="u.college">
+            <option *ngFor="let c of lColleges.listeColleges, let ii = index">{{ c.name }} à {{ c.address.addressLocality }}</option>
+          </select>
+        </fieldset>
+
+        <button type="submit" ng-keypress="$event.keyCode == 13">Enregistrer les modifications</button>
+      </form>
+
+      <div>
+        <button class="edite" (click)="u.edit = !u.edit"><i class="material-icons">edit</i></button>
+        <button><i class="material-icons">delete</i></button>
+      </div>
+
+    </article>
+
+  </div>
 
 </section>

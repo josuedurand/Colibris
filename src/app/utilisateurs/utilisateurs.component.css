@@ -1,12 +1,15 @@
+.w90 {
+    width: 90%
+}
 
-table {
-    border-collapse: collapse;
-    width: 100%;
+.w40 {
+    width: 40%;
 }
-th, td {
-    /* border: silver 1px solid; */
-    padding: 10px;
+
+.max {
+    width: 90%;
 }
-td {
-    border: silver 1px solid;
+
+fieldset {
+    border: none;
 }

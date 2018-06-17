@@ -19,6 +19,7 @@ import { Erreur404Component } from './erreur404/erreur404.component';
 import { SeriesService } from './services/series.service';
 import { UtilisateursService } from './services/utilisateurs.service';
 import { AuthentificationService } from './services/authentification.service';
+import { CollegesService } from './services/colleges.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AuthentificationService } from './services/authentification.service';
   providers: [
     SeriesService,
     UtilisateursService,
+    CollegesService,
     AuthentificationService
   ],
   bootstrap: [AppComponent]
